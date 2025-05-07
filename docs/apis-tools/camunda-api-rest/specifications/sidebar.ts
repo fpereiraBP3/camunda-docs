@@ -318,6 +318,18 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/add-application-to-group",
+          label: "Assign an application to a group (Work-in-Progress)",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/unassign-application-from-group",
+          label: "Unassign an application from a group (Work-in-Progress)",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
           id: "apis-tools/camunda-api-rest/specifications/add-mapping-to-group",
           label: "Assign a mapping rule to a group (Work-in-Progress)",
           className: "api-method put",
@@ -569,6 +581,12 @@ const sidebar: SidebarsConfig = {
           label: "Modify process instance",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/get-process-instance-call-hierarchy",
+          label: "Get call hierarchy for process instance",
+          className: "api-method get",
+        },
       ],
     },
     {
@@ -643,9 +661,39 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/add-application-to-role",
+          label: "Assign an application to a role (Work-in-Progress)",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/remove-application-from-role",
+          label: "Unassign an application from a role (Work-in-Progress)",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
           id: "apis-tools/camunda-api-rest/specifications/search-roles",
           label: "Search roles (Work-in-Progress)",
           className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/add-group-to-role",
+          label: "Assign a group to a role (Work-in-Progress)",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/remove-group-from-role",
+          label: "Unassign a group from a role (Work-in-Progress)",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/add-mapping-to-role",
+          label: "Assign a mapping to a role (Work-in-Progress)",
+          className: "api-method put",
         },
       ],
     },
@@ -709,6 +757,18 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/assign-application-to-tenant",
+          label: "Assign a user to a tenant",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/remove-application-from-tenant",
+          label: "Remove an application from a tenant",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
           id: "apis-tools/camunda-api-rest/specifications/assign-mapping-rule-to-tenant",
           label: "Assign a mapping rule to a tenant",
           className: "api-method put",
@@ -735,6 +795,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "apis-tools/camunda-api-rest/specifications/remove-group-from-tenant",
           label: "Remove a group from a tenant",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/assign-role-to-tenant",
+          label: "Assign a role to a tenant",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "apis-tools/camunda-api-rest/specifications/remove-role-from-tenant",
+          label: "Remove a role from a tenant",
           className: "api-method delete",
         },
         {
