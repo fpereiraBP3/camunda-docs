@@ -18,8 +18,8 @@ to the latest stable released Langchain4j library.
 Before using the **Vector Database Connector**, it is highly recommended to understand the
 [concept of LLM embeddings](https://huggingface.co/spaces/hesamation/primer-llm-embedding).
 
-To start using the **Vector Database Connector**, you need to have access to supported LLM embeddings API to convert
-documents content into vectorized embeddings form. You will also need to have write access to supported databases.
+To start using the **Vector Database Connector**, you need to have access to a supported LLM embeddings API to convert
+documents content into vectorized embeddings form. You will also need to have write access to a supported databases.
 
 ## Create a Connector task
 
@@ -42,7 +42,7 @@ To perform this operation, enter the following:
 - **Vector store** section: refer to the [relevant section](#vector-stores).
 - **Document** section: refer to the [relevant section](#embedding-document-configuration).
 
-As a result of this operation you will get an array of created embeddings,
+As a result of this operation you will get an array of created embeddings chunks IDs,
 e.g. `["d599ec62-fe51-4a91-bbf0-26e1241f9079", "a1fad021-5148-42b4-aa02-7de9d590e69c"]`.
 
 ### Retrieve document
@@ -60,7 +60,7 @@ To perform this operation, enter the following:
 - **Embedding model** section: refer to the [relevant section](#embedding-models).
 - **Vector store** section: refer to the [relevant section](#vector-stores).
 
-As a result of this operation you will get an array of relevant chunk array, where each includes a [chunk ID](#splitting),
+As a result of this operation you will get an array of relevant chunks, where each includes a [chunk ID](#splitting),
 Camunda document reference metadata, similarity score, and the actual text content.
 
 ```json
@@ -95,7 +95,7 @@ Camunda document reference metadata, similarity score, and the actual text conte
 ### Amazon Bedrock
 
 The **Vector Database Connector** currently supports only [Amazon Titan V1/V2 models](https://docs.aws.amazon.com/bedrock/latest/userguide/titan-embedding-models.html).
-Please see an [official Amazon documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-embed-text.html)
+Please see the [official Amazon documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-embed-text.html)
 that will explain what are and how to choose request parameters.
 
 The **Vector Database Connector** uses [Langchain4J implementation](https://docs.langchain4j.dev/integrations/embedding-models/amazon-bedrock).
@@ -115,11 +115,11 @@ Enter the following parameters:
 - - When embedding: if index is not present, the Connector will create a new one.
 - - When retrieving: if the index is absent, the Connector will raise an error.
 
-### Amazon Managed Opensearch
+### Amazon Managed OpenSearch
 
 - **Access key** and **Secret key**: enter AWS IAM credential for the user that has read/write access.
-- **Server URL**: is an Amazon Managed Opensearch URL _without_ protocol, i.e. `my-opensearch.aws.com:port`.
-- **Region**: of the Amazon Managed Opensearch instance.
+- **Server URL**: is an Amazon Managed OpenSearch URL _without_ protocol, i.e. `my-opensearch.aws.com:port`.
+- **Region**: of the Amazon Managed OpenSearch instance.
 - **Index name**: name of the index where you wish to store embeddings.
 - - When embedding: if index is not present, the Connector will create a new one.
 - - When retrieving: if the index is absent, the Connector will raise an error.
@@ -136,7 +136,7 @@ Input will be handled as a regular UTF-8 text.
 Hint: a FEEL [string conversion function](/components/modeler/feel/builtin-functions/feel-built-in-functions-conversion/#stringfrom) might be useful if you have JSON input.
 
 The **Camunda document** might be useful when you deal with larger documents pipelines that come either from
-[webhook or user tasks](/guides/document-handling). Input documents will be parsed with [Apache Tika](https://tika.apache.org/) parser, hence files
+[webhook or user tasks](/guides/document-handling). Input documents will be parsed with [Apache Tika](https://tika.apache.org/), hence files
 can be of any Apache Tika supported formats.
 
 ### Splitting
